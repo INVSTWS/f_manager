@@ -73,3 +73,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "searchkick"
+gem "elasticsearch" 
+gem "opensearch-ruby"

@@ -2,13 +2,14 @@
 
 <h1>Operations</h1>
 
+<%= form_with url: filter_operations_path, method: :get do |form| %>
+  <%= form.label :category_id, 'Категория' %>
+  <%= form.collection_select :category_id, Category.all, :id, :name %>
+  <%= form.submit 'Фильтр' %>
+<% end %>
+
 <div id="operations">
-  <% @operations.each do |operation| %>
-    <%= render operation %>
-    <p>
-      <%= link_to "Show this operation", operation %>
-    </p>
-  <% end %>
+<%=render "operations/operations", operation: @operation%>
 </div>
 
 <%= link_to "New operation", new_operation_path %>

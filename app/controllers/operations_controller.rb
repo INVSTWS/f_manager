@@ -57,6 +57,11 @@ class OperationsController < ApplicationController
     end
   end
 
+
+  def filter
+    @operations = Operation.where(category_id: params[:category_id])
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_operation
