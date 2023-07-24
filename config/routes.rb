@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'category_search/index'
+  get 'search/index'
   post 'searc/index'
   resources :operations
   resources :categories

@@ -4,9 +4,8 @@
 
 <div class="m-2 shadow p-3 mb-5 bg-body-tertiary rounded">
     <div class="table-responsive" style="height: 300px; overflow-y: scroll;">
-<div>
+<div class="d-flex align-items-center">
     <%= form_with url: searc_index_path, method: :post do |form| %>
-        
         <%= form.label :category_id, 'Category' %>
         <%= form.select :category_id, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}.insert(0, ["Filter by category", nil])), {}, {class: "form-select w-25 m-2"} %>
         <%= form.submit 'Filter' %>
