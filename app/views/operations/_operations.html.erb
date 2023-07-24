@@ -1,11 +1,3 @@
-<div class="m-2 shadow p-3 mb-5 bg-body-tertiary rounded">
-    <div class="table-responsive" style="height: 300px; overflow-y: scroll;">
-  <div>
-  <%=form_with model: @operation do |form|%>
-    <%= form.label :category_id, style: "display: block" %>
-    <%= form.select :category_id, options_for_select(Category.all.map {|cat| [cat.name, cat.id]})%>
-  <%end%>
-  </div>
     <table class="table">
         <thead>
         <tr>
@@ -41,4 +33,3 @@
     </div>
 </div>
 
- <%=link_to "New operation", new_operation_path , class:"btn btn-primary mb-5"%>

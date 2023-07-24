@@ -75,5 +75,5 @@ group :test do
 end
 
 gem "searchkick"
-gem "elasticsearch" 
+gem "elasticsearch", "< 7.14"
 gem "opensearch-ruby"

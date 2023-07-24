@@ -1,0 +1,2 @@
+module SearcHelper
+end

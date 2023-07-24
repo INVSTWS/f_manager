@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-    def search
-        @categories = Category.search(params[:query])
+    def index
     end
 end
