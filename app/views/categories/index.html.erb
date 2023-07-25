@@ -1,14 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+<div class="d-block">
+<div class="table-responsive" style="height: 300px; overflow-y: scroll;">
+  <div class="m-2 shadow p-3 mb-5 bg-body-tertiary rounded">
+      <%= form_with url: category_search_index_path, method: :post do |form| %> 
+        <%= form.label :search, 'Search' %>
+        <%= form.text_field :search, class:"form-control mx-2 w-25"%>
+        <%= form.submit 'Search' %>
+      <%end%>
+      <div id="categories">
+        <%=render "categories/categories"%>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= link_to "New category", new_category_path %>
+
+<%= link_to "New category", new_category_path, class: "btn btn-primary" %>
